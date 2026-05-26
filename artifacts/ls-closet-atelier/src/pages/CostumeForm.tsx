@@ -16,7 +16,6 @@ export function CostumeForm() {
       preferredContact: "Email",
       routineType: "",
       baseStyle: "",
-      measurementsMethod: "",
       coverageLevel: "",
       rhinestonePreference: "",
       rushOrder: "No",
@@ -26,7 +25,6 @@ export function CostumeForm() {
 
   const danceStyleOther = watch("danceStyleOtherCheck");
   const designElementsOther = watch("designElementsOtherCheck");
-  const measurementsMethod = watch("measurementsMethod");
   const noBudget = watch("noBudget");
 
   const onSubmit = async (data: any) => {
@@ -257,25 +255,9 @@ export function CostumeForm() {
         <div className="space-y-6">
           <h3 className="text-2xl text-primary italic border-b border-white/10 pb-2">Measurements</h3>
           
-          <div className="space-y-4">
-            <Label>How will you provide measurements? <span className="text-primary">*</span></Label>
-            <div className="flex flex-col gap-3">
-              <label className="flex items-center gap-2 cursor-pointer text-sm">
-                <input type="radio" value="Upload measurement sheet" {...register("measurementsMethod", { required: true })} className="accent-primary" />
-                <span>Upload measurement sheet</span>
-              </label>
-              <label className="flex items-center gap-2 cursor-pointer text-sm">
-                <input type="radio" value="Schedule fitting with designer" {...register("measurementsMethod", { required: true })} className="accent-primary" />
-                <span>Schedule fitting with designer</span>
-              </label>
-            </div>
-            
-            {measurementsMethod === "Upload measurement sheet" && (
-              <div className="mt-4">
-                <Input type="file" accept=".pdf,image/*" {...register("measurementFile")} className="bg-input border-border file:text-primary file:bg-transparent file:border-0 cursor-pointer" />
-              </div>
-            )}
-          </div>
+          <p className="text-sm text-zinc-400 leading-relaxed italic border-l-2 border-primary/50 pl-4">
+            A meeting will be scheduled for measurements to be taken by your design professional.
+          </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="space-y-2">
