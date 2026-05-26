@@ -56,31 +56,32 @@ export function AlterationForm() {
   };
 
   return (
+    <div className="min-h-screen bg-stone-200">
     <div className="pt-32 pb-24 px-6 md:px-12 lg:px-24 max-w-3xl mx-auto">
       <div className="mb-12 text-center">
-        <h1 className="text-4xl md:text-5xl italic tracking-wide text-foreground mb-4">Alteration Request Form</h1>
-        <p className="text-zinc-400 font-light">Please complete this form to request alterations.</p>
+        <h1 className="text-4xl md:text-5xl italic tracking-wide text-stone-900 mb-4">Alteration Request Form</h1>
+        <p className="text-stone-600 font-light">Please complete this form to request alterations.</p>
       </div>
 
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-10">
         
         {/* Personal Details */}
         <div className="space-y-6">
-          <h3 className="text-xl text-primary italic border-b border-white/10 pb-2">Client Details</h3>
+          <h3 className="text-xl text-primary italic border-b border-stone-300 pb-2">Client Details</h3>
           
           <div className="space-y-2">
             <Label>Full Name <span className="text-primary">*</span></Label>
-            <Input {...register("fullName", { required: true })} className="bg-input border-border focus-visible:ring-primary" />
+            <Input {...register("fullName", { required: true })} className="bg-white border-stone-300 text-stone-900 focus-visible:ring-primary" />
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="space-y-2">
               <Label>Email Address <span className="text-primary">*</span></Label>
-              <Input type="email" {...register("email", { required: true })} className="bg-input border-border focus-visible:ring-primary" />
+              <Input type="email" {...register("email", { required: true })} className="bg-white border-stone-300 text-stone-900 focus-visible:ring-primary" />
             </div>
             <div className="space-y-2">
               <Label>Phone Number <span className="text-primary">*</span></Label>
-              <Input type="tel" {...register("phone", { required: true })} className="bg-input border-border focus-visible:ring-primary" />
+              <Input type="tel" {...register("phone", { required: true })} className="bg-white border-stone-300 text-stone-900 focus-visible:ring-primary" />
             </div>
           </div>
 
@@ -99,12 +100,12 @@ export function AlterationForm() {
 
         {/* Project Details */}
         <div className="space-y-6">
-          <h3 className="text-xl text-primary italic border-b border-white/10 pb-2">Alteration Requirements</h3>
+          <h3 className="text-xl text-primary italic border-b border-stone-300 pb-2">Alteration Requirements</h3>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="space-y-2">
               <Label>Type of Garment <span className="text-primary">*</span></Label>
-              <select {...register("typeOfGarment", { required: true })} className="w-full h-10 px-3 py-2 bg-input border border-border rounded-md text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary">
+              <select {...register("typeOfGarment", { required: true })} className="w-full h-10 px-3 py-2 bg-white border border-stone-300 rounded-md text-sm text-stone-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary">
                 <option value="">Select an option</option>
                 <option value="Wedding Dress">Wedding Dress</option>
                 <option value="Suit">Suit</option>
@@ -117,7 +118,7 @@ export function AlterationForm() {
             </div>
             <div className="space-y-2">
               <Label>Quantity of Items <span className="text-primary">*</span></Label>
-              <Input type="number" min="1" {...register("quantity", { required: true })} className="bg-input border-border focus-visible:ring-primary" />
+              <Input type="number" min="1" {...register("quantity", { required: true })} className="bg-white border-stone-300 text-stone-900 focus-visible:ring-primary" />
             </div>
           </div>
 
@@ -127,7 +128,7 @@ export function AlterationForm() {
               {['Hemming', 'Taking in/Letting out', 'Sleeve adjustments', 'Waist/Hip adjustments', 'Shoulder adjustments', 'Bust adjustments', 'Repairs', 'Other'].map(type => (
                 <label key={type} className="flex items-center gap-2 cursor-pointer text-sm">
                   <input type="checkbox" value={type} {...register("alterationType")} className="accent-primary" />
-                  <span className="text-zinc-300">{type}</span>
+                  <span className="text-stone-700">{type}</span>
                 </label>
               ))}
             </div>
@@ -136,22 +137,22 @@ export function AlterationForm() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="space-y-2">
               <Label>Do you need the items by a certain date?</Label>
-              <Input type="date" {...register("neededByDate")} className="bg-input border-border focus-visible:ring-primary" />
+              <Input type="date" {...register("neededByDate")} className="bg-white border-stone-300 text-stone-900 focus-visible:ring-primary" />
             </div>
             <div className="space-y-2">
               <Label>Event Date (Wedding/Special Event)</Label>
-              <Input type="date" {...register("eventDate")} className="bg-input border-border focus-visible:ring-primary" />
+              <Input type="date" {...register("eventDate")} className="bg-white border-stone-300 text-stone-900 focus-visible:ring-primary" />
             </div>
           </div>
 
           <div className="space-y-2">
             <Label>Alteration Details / Additional Information <span className="text-primary">*</span></Label>
-            <Textarea {...register("details", { required: true })} rows={4} className="bg-input border-border focus-visible:ring-primary resize-none" placeholder="Please describe what needs to be done..." />
+            <Textarea {...register("details", { required: true })} rows={4} className="bg-white border-stone-300 text-stone-900 focus-visible:ring-primary resize-none" placeholder="Please describe what needs to be done..." />
           </div>
 
           <div className="space-y-2">
             <Label>Upload Photo of Garment <span className="text-primary">*</span></Label>
-            <Input type="file" accept="image/*" {...register("photo", { required: true })} className="bg-input border-border cursor-pointer file:text-primary file:bg-transparent file:border-0" />
+            <Input type="file" accept="image/*" {...register("photo", { required: true })} className="bg-white border-stone-300 text-stone-900 cursor-pointer file:text-primary file:bg-transparent file:border-0" />
           </div>
         </div>
 
@@ -159,7 +160,7 @@ export function AlterationForm() {
         <div className="space-y-6">
           <div className="space-y-2">
             <Label>How did you hear about us?</Label>
-            <select {...register("howHear")} className="w-full h-10 px-3 py-2 bg-input border border-border rounded-md text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary">
+            <select {...register("howHear")} className="w-full h-10 px-3 py-2 bg-white border border-stone-300 rounded-md text-sm text-stone-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary">
               <option value="">Select an option</option>
               <option value="Social Media">Social Media</option>
               <option value="Personal Referral">Personal Referral</option>
@@ -172,14 +173,14 @@ export function AlterationForm() {
           {(howHearValue === "Other" || howHearValue === "Personal Referral") && (
             <div className="space-y-2">
               <Label>Referral & Other details</Label>
-              <Input {...register("referralDetails")} className="bg-input border-border focus-visible:ring-primary" />
+              <Input {...register("referralDetails")} className="bg-white border-stone-300 text-stone-900 focus-visible:ring-primary" />
             </div>
           )}
 
-          <div className="pt-6 border-t border-white/10">
+          <div className="pt-6 border-t border-stone-300">
             <label className="flex items-start gap-3 cursor-pointer">
               <input type="checkbox" {...register("terms", { required: true })} className="mt-1 accent-primary" />
-              <span className="text-sm text-zinc-300">
+              <span className="text-sm text-stone-700">
                 I have read the <Link href="/terms" className="text-primary hover:underline">terms and conditions</Link>. <span className="text-primary">*</span>
               </span>
             </label>
@@ -190,6 +191,7 @@ export function AlterationForm() {
           {isSubmitting ? "Submitting..." : "Submit Request"}
         </Button>
       </form>
+    </div>
     </div>
   );
 }

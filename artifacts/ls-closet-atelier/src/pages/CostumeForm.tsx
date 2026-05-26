@@ -64,41 +64,42 @@ export function CostumeForm() {
   };
 
   return (
+    <div className="min-h-screen bg-stone-200">
     <div className="pt-32 pb-24 px-6 md:px-12 lg:px-24 max-w-4xl mx-auto">
       <div className="mb-12 text-center">
-        <h1 className="text-4xl md:text-5xl italic tracking-wide text-foreground mb-4">Couture Costume Application</h1>
-        <p className="text-zinc-400 font-light">Please complete this form to begin the custom design process.</p>
+        <h1 className="text-4xl md:text-5xl italic tracking-wide text-stone-900 mb-4">Couture Costume Application</h1>
+        <p className="text-stone-600 font-light">Please complete this form to begin the custom design process.</p>
       </div>
 
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-12">
         
         {/* Client Information */}
         <div className="space-y-6">
-          <h3 className="text-2xl text-primary italic border-b border-white/10 pb-2">Client Information</h3>
+          <h3 className="text-2xl text-primary italic border-b border-stone-300 pb-2">Client Information</h3>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="space-y-2">
               <Label>Parent / Guardian Name <span className="text-primary">*</span></Label>
-              <Input {...register("parentName", { required: true })} className="bg-input border-border" />
+              <Input {...register("parentName", { required: true })} className="bg-white border-stone-300 text-stone-900" />
             </div>
             <div className="space-y-2">
               <Label>Dancer's Full Name <span className="text-primary">*</span></Label>
-              <Input {...register("dancerName", { required: true })} className="bg-input border-border" />
+              <Input {...register("dancerName", { required: true })} className="bg-white border-stone-300 text-stone-900" />
             </div>
             <div className="space-y-2">
               <Label>Dancer Age <span className="text-primary">*</span></Label>
-              <Input type="number" {...register("dancerAge", { required: true })} className="bg-input border-border" />
+              <Input type="number" {...register("dancerAge", { required: true })} className="bg-white border-stone-300 text-stone-900" />
             </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="space-y-2">
               <Label>Email Address <span className="text-primary">*</span></Label>
-              <Input type="email" {...register("email", { required: true })} className="bg-input border-border" />
+              <Input type="email" {...register("email", { required: true })} className="bg-white border-stone-300 text-stone-900" />
             </div>
             <div className="space-y-2">
               <Label>Phone Number <span className="text-primary">*</span></Label>
-              <Input type="tel" {...register("phone", { required: true })} className="bg-input border-border" />
+              <Input type="tel" {...register("phone", { required: true })} className="bg-white border-stone-300 text-stone-900" />
             </div>
           </div>
 
@@ -117,27 +118,27 @@ export function CostumeForm() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="space-y-2">
               <Label>Dance Studio Name <span className="text-primary">*</span></Label>
-              <Input {...register("studioName", { required: true })} className="bg-input border-border" />
+              <Input {...register("studioName", { required: true })} className="bg-white border-stone-300 text-stone-900" />
             </div>
             <div className="space-y-2">
               <Label>Instructor / Choreographer <span className="text-primary">*</span></Label>
-              <Input {...register("instructor", { required: true })} className="bg-input border-border" />
+              <Input {...register("instructor", { required: true })} className="bg-white border-stone-300 text-stone-900" />
             </div>
           </div>
         </div>
 
         {/* Performance Details */}
         <div className="space-y-6">
-          <h3 className="text-2xl text-primary italic border-b border-white/10 pb-2">Performance Details</h3>
+          <h3 className="text-2xl text-primary italic border-b border-stone-300 pb-2">Performance Details</h3>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="space-y-2">
               <Label>Competition / Event Name <span className="text-primary">*</span></Label>
-              <Input {...register("eventName", { required: true })} className="bg-input border-border" />
+              <Input {...register("eventName", { required: true })} className="bg-white border-stone-300 text-stone-900" />
             </div>
             <div className="space-y-2">
               <Label>Performance Date <span className="text-primary">*</span></Label>
-              <Input type="date" {...register("performanceDate", { required: true })} className="bg-input border-border" />
+              <Input type="date" {...register("performanceDate", { required: true })} className="bg-white border-stone-300 text-stone-900" />
             </div>
           </div>
 
@@ -159,12 +160,12 @@ export function CostumeForm() {
               {['Jazz', 'Lyrical', 'Contemporary', 'Ballet', 'Musical Theatre', 'Tap', 'Hip Hop', 'Acro'].map(style => (
                 <label key={style} className="flex items-center gap-2 cursor-pointer text-sm">
                   <input type="checkbox" value={style} {...register("danceStyle")} className="accent-primary" />
-                  <span className="text-zinc-300">{style}</span>
+                  <span className="text-stone-700">{style}</span>
                 </label>
               ))}
               <label className="flex items-center gap-2 cursor-pointer text-sm">
                 <input type="checkbox" {...register("danceStyleOtherCheck")} className="accent-primary" />
-                <span className="text-zinc-300">Other</span>
+                <span className="text-stone-700">Other</span>
               </label>
             </div>
             {danceStyleOther && (
@@ -174,7 +175,7 @@ export function CostumeForm() {
 
           <div className="space-y-2">
             <Label>Song Title & Artist <span className="text-primary">*</span></Label>
-            <Input {...register("songInfo", { required: true })} className="bg-input border-border" />
+            <Input {...register("songInfo", { required: true })} className="bg-white border-stone-300 text-stone-900" />
           </div>
 
           <div className="space-y-2">
@@ -185,7 +186,7 @@ export function CostumeForm() {
 
         {/* Design Vision */}
         <div className="space-y-6">
-          <h3 className="text-2xl text-primary italic border-b border-white/10 pb-2">Design Vision</h3>
+          <h3 className="text-2xl text-primary italic border-b border-stone-300 pb-2">Design Vision</h3>
           
           <div className="space-y-3">
             <Label>How should this costume feel on stage? <span className="text-primary">*</span></Label>
@@ -193,7 +194,7 @@ export function CostumeForm() {
               {['Elegant', 'Romantic/Flowing', 'Glam/Sparkly', 'Modern/Edgy', 'Dramatic/Theatrical', 'Minimalist Luxe', 'Character Inspired'].map(feel => (
                 <label key={feel} className="flex items-center gap-2 cursor-pointer text-sm">
                   <input type="checkbox" value={feel} {...register("costumeFeel")} className="accent-primary" />
-                  <span className="text-zinc-300">{feel}</span>
+                  <span className="text-stone-700">{feel}</span>
                 </label>
               ))}
             </div>
@@ -202,11 +203,11 @@ export function CostumeForm() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="space-y-2">
               <Label>Primary Colors <span className="text-primary">*</span></Label>
-              <Input {...register("primaryColors", { required: true })} className="bg-input border-border" />
+              <Input {...register("primaryColors", { required: true })} className="bg-white border-stone-300 text-stone-900" />
             </div>
             <div className="space-y-2">
               <Label>Colors to Avoid</Label>
-              <Input {...register("colorsToAvoid")} className="bg-input border-border" />
+              <Input {...register("colorsToAvoid")} className="bg-white border-stone-300 text-stone-900" />
             </div>
           </div>
 
@@ -223,7 +224,7 @@ export function CostumeForm() {
 
         {/* Costume Features */}
         <div className="space-y-6">
-          <h3 className="text-2xl text-primary italic border-b border-white/10 pb-2">Costume Features</h3>
+          <h3 className="text-2xl text-primary italic border-b border-stone-300 pb-2">Costume Features</h3>
           
           <div className="space-y-3">
             <Label>Base Style <span className="text-primary">*</span></Label>
@@ -243,12 +244,12 @@ export function CostumeForm() {
               {['Illusion Mesh', 'Lace/Appliqué', 'Rhinestones', 'Fringe', 'Sleeves', 'Open Back', 'Cutouts', 'Skirt/Overlay', 'Gloves'].map(elem => (
                 <label key={elem} className="flex items-center gap-2 cursor-pointer text-sm">
                   <input type="checkbox" value={elem} {...register("designElements")} className="accent-primary" />
-                  <span className="text-zinc-300">{elem}</span>
+                  <span className="text-stone-700">{elem}</span>
                 </label>
               ))}
               <label className="flex items-center gap-2 cursor-pointer text-sm">
                 <input type="checkbox" {...register("designElementsOtherCheck")} className="accent-primary" />
-                <span className="text-zinc-300">Other</span>
+                <span className="text-stone-700">Other</span>
               </label>
             </div>
             {designElementsOther && (
@@ -259,16 +260,16 @@ export function CostumeForm() {
 
         {/* Measurements */}
         <div className="space-y-6">
-          <h3 className="text-2xl text-primary italic border-b border-white/10 pb-2">Measurements</h3>
+          <h3 className="text-2xl text-primary italic border-b border-stone-300 pb-2">Measurements</h3>
           
-          <p className="text-sm text-zinc-400 leading-relaxed italic border-l-2 border-primary/50 pl-4">
+          <p className="text-sm text-stone-600 leading-relaxed italic border-l-2 border-primary/50 pl-4">
             A meeting will be scheduled for measurements to be taken by your design professional.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="space-y-2">
               <Label>Current Leotard Size <span className="text-primary">*</span></Label>
-              <Input {...register("leotardSize", { required: true })} className="bg-input border-border" />
+              <Input {...register("leotardSize", { required: true })} className="bg-white border-stone-300 text-stone-900" />
             </div>
           </div>
 
@@ -287,7 +288,7 @@ export function CostumeForm() {
 
         {/* Sparkle & Performance */}
         <div className="space-y-6">
-          <h3 className="text-2xl text-primary italic border-b border-white/10 pb-2">Sparkle & Performance</h3>
+          <h3 className="text-2xl text-primary italic border-b border-stone-300 pb-2">Sparkle & Performance</h3>
           
           <div className="space-y-3">
             <Label>Rhinestone Coverage Preference <span className="text-primary">*</span></Label>
@@ -307,7 +308,7 @@ export function CostumeForm() {
               {['Turns', 'Acro', 'Floor Work', 'Fast Movement', 'Lifts'].map(req => (
                 <label key={req} className="flex items-center gap-2 cursor-pointer text-sm">
                   <input type="checkbox" value={req} {...register("movementReqs")} className="accent-primary" />
-                  <span className="text-zinc-300">{req}</span>
+                  <span className="text-stone-700">{req}</span>
                 </label>
               ))}
             </div>
@@ -316,12 +317,12 @@ export function CostumeForm() {
 
         {/* Timeline & Budget */}
         <div className="space-y-6">
-          <h3 className="text-2xl text-primary italic border-b border-white/10 pb-2">Timeline & Budget</h3>
+          <h3 className="text-2xl text-primary italic border-b border-stone-300 pb-2">Timeline & Budget</h3>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="space-y-2">
               <Label>Date Costume Must Be Competition Ready <span className="text-primary">*</span></Label>
-              <Input type="date" {...register("readyDate", { required: true })} className="bg-input border-border" />
+              <Input type="date" {...register("readyDate", { required: true })} className="bg-white border-stone-300 text-stone-900" />
               {isRushOrder && (
                 <p className="text-xs tracking-wide text-amber-400 flex items-center gap-1.5 mt-1">
                   <span>⚠</span> Rush order fees apply.
@@ -335,7 +336,7 @@ export function CostumeForm() {
             <Input {...register("investment")} disabled={noBudget} className="bg-input border-border disabled:opacity-50" placeholder="$" />
             <label className="flex items-center gap-2 cursor-pointer text-sm pt-1">
               <input type="checkbox" {...register("noBudget")} className="accent-primary" />
-              <span className="text-zinc-300">I don't have a budget</span>
+              <span className="text-stone-700">I don't have a budget</span>
             </label>
           </div>
         </div>
@@ -344,13 +345,13 @@ export function CostumeForm() {
         <div className="space-y-6">
           <div className="space-y-2">
             <Label>Anything else you want the designer to know?</Label>
-            <Textarea {...register("additionalNotes")} rows={4} className="bg-input border-border resize-none" />
+            <Textarea {...register("additionalNotes")} rows={4} className="bg-white border-stone-300 text-stone-900 resize-none" />
           </div>
 
-          <div className="pt-6 border-t border-white/10">
+          <div className="pt-6 border-t border-stone-300">
             <label className="flex items-start gap-3 cursor-pointer">
               <input type="checkbox" {...register("terms", { required: true })} className="mt-1 accent-primary" />
-              <span className="text-sm text-zinc-300">
+              <span className="text-sm text-stone-700">
                 I have read the <Link href="/terms" className="text-primary hover:underline">terms & conditions</Link> and understand this form is a request for custom couture design services and that project acceptance is based on availability and design consultation. <span className="text-primary">*</span>
               </span>
             </label>
@@ -361,6 +362,7 @@ export function CostumeForm() {
           {isSubmitting ? "Submitting..." : "Submit Application"}
         </Button>
       </form>
+    </div>
     </div>
   );
 }
