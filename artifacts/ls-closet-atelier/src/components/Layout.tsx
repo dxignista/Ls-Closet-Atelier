@@ -23,7 +23,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
   return (
     <div className="min-h-screen flex flex-col font-serif bg-background text-foreground selection:bg-[#4A2F3D] selection:text-white">
-      <header className={`fixed top-0 left-0 right-0 z-50 px-6 py-6 flex items-center justify-between transition-colors duration-300 ${scrolled ? "bg-background/90 backdrop-blur-md border-b border-white/5" : isHome ? "mix-blend-difference text-white" : "bg-background/90 backdrop-blur-md border-b border-white/5"}`}>
+      <header className={`fixed top-0 left-0 right-0 z-50 px-6 py-6 flex items-center justify-between transition-all duration-300 ${scrolled ? "bg-background/90 backdrop-blur-md border-b border-white/5" : isHome ? "mix-blend-difference text-white" : "bg-background/70 backdrop-blur-sm"}`}>
         <Link href="/" className="text-xl tracking-widest font-medium z-50 relative" onClick={close}>
           L'S CLOSET ATELIER
         </Link>
