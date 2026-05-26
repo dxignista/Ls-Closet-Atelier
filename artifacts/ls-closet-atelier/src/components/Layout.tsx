@@ -73,18 +73,17 @@ export function Layout({ children }: { children: React.ReactNode }) {
       </main>
 
       <footer className="pt-24 pb-8 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto flex flex-col items-center w-full mt-auto bg-background">
-        <h2 className="text-2xl tracking-widest uppercase mb-6 text-foreground">Contact Us</h2>
-        <div className="flex items-center gap-6 mb-12">
-          <a href="https://instagram.com/lscloset.atelier" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors" aria-label="Instagram">
-            <Instagram className="w-5 h-5" />
-          </a>
-          <a href="mailto:lsclosetatelier@gmail.com" className="text-muted-foreground hover:text-foreground transition-colors" aria-label="Email">
-            <Mail className="w-5 h-5" />
-          </a>
-        </div>
         <div className="w-full h-px bg-white/10 mb-8"></div>
         <div className="w-full flex flex-col md:flex-row justify-between items-center gap-4 text-xs tracking-widest text-muted-foreground uppercase">
           <p>© {new Date().getFullYear()} L's Closet Atelier. All rights reserved.</p>
+          <div className="flex items-center gap-6">
+            <a href="https://instagram.com/lscloset.atelier" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors" aria-label="Instagram">
+              <Instagram className="w-4 h-4" />
+            </a>
+            <a href="mailto:lsclosetatelier@gmail.com" className="hover:text-foreground transition-colors" aria-label="Email">
+              <Mail className="w-4 h-4" />
+            </a>
+          </div>
           <div className="flex items-center gap-6">
             <Link href="/privacy" className="hover:text-foreground transition-colors">Privacy Policy</Link>
             <Link href="/terms" className="hover:text-foreground transition-colors">Terms of Service</Link>
