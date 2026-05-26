@@ -62,8 +62,8 @@ export function AIImagery() {
       <section className="py-32 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
         <div className="w-full md:w-1/2 order-2 md:order-1">
           <img 
-            src="/__mockup/images/atelier-accent.png" 
-            alt="Dancer mid-movement in couture" 
+            src="/__mockup/images/dancer-garden.jpg" 
+            alt="Dancer in garden" 
             className="w-full aspect-[3/4] object-cover rounded-sm shadow-2xl shadow-black/50"
           />
         </div>
