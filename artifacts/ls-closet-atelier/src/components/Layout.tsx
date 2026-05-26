@@ -50,6 +50,13 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <div
         className={`fixed top-0 right-0 h-full w-72 z-[50] bg-[#0A0608] border-l border-white/5 flex flex-col justify-center px-10 gap-10 transition-transform duration-300 ease-in-out md:hidden ${mobileMenuOpen ? "translate-x-0" : "translate-x-full"}`}
       >
+        <button
+          onClick={close}
+          aria-label="Close menu"
+          className="absolute top-6 right-6 text-muted-foreground hover:text-foreground transition-colors"
+        >
+          <X className="w-5 h-5" />
+        </button>
         <Link href="/" onClick={close} className="text-sm tracking-widest uppercase hover:text-primary transition-colors duration-200">Home</Link>
         <Link href="/alteration" onClick={close} className="text-sm tracking-widest uppercase hover:text-primary transition-colors duration-200">Alteration Requests</Link>
         <Link href="/costume" onClick={close} className="text-sm tracking-widest uppercase hover:text-primary transition-colors duration-200">Couture Costumes</Link>
