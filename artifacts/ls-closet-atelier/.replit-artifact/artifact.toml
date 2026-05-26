@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "L's Closet Atelier"
+version = "1.0.0"
+id = "artifacts/ls-closet-atelier"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 24084
+
+[services.development]
+run = "pnpm --filter @workspace/ls-closet-atelier run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/ls-closet-atelier", "run", "build" ]
+publicDir = "artifacts/ls-closet-atelier/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "24084"
+BASE_PATH = "/"
