@@ -54,6 +54,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
           <a href="mailto:lsclosetatelier@gmail.com" className="text-muted-foreground hover:text-foreground transition-colors" aria-label="Email">
             <Mail className="w-5 h-5" />
           </a>
+          <a href="https://venmo.com/code?user_id=4605407506990469447&created=1779775604.002775&printed=1" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors" aria-label="Venmo">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+              <path d="M19.1 2c.4.7.6 1.5.6 2.5 0 3.1-2.7 7.2-4.9 10H9.9L7.2 2.6l5-.5 1.4 10.9c1.3-2.1 2.8-5.5 2.8-7.7 0-1.2-.2-2-.5-2.7L19.1 2z"/>
+            </svg>
+          </a>
         </div>
         <div className="w-full h-px bg-white/10 mb-8"></div>
         <div className="w-full flex flex-col md:flex-row justify-between items-center gap-4 text-xs tracking-widest text-muted-foreground uppercase">
