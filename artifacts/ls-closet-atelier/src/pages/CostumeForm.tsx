@@ -26,6 +26,13 @@ export function CostumeForm() {
   const danceStyleOther = watch("danceStyleOtherCheck");
   const designElementsOther = watch("designElementsOtherCheck");
   const noBudget = watch("noBudget");
+  const readyDate = watch("readyDate");
+
+  const isRushOrder = React.useMemo(() => {
+    if (!readyDate) return false;
+    const diff = new Date(readyDate).getTime() - Date.now();
+    return diff > 0 && diff < 14 * 24 * 60 * 60 * 1000;
+  }, [readyDate]);
 
   const onSubmit = async (data: any) => {
     setIsSubmitting(true);
@@ -316,6 +323,11 @@ export function CostumeForm() {
             <div className="space-y-2">
               <Label>Date Costume Must Be Competition Ready <span className="text-primary">*</span></Label>
               <Input type="date" {...register("readyDate", { required: true })} className="bg-input border-border" />
+              {isRushOrder && (
+                <p className="text-xs tracking-wide text-amber-400 flex items-center gap-1.5 mt-1">
+                  <span>⚠</span> Rush order fees apply.
+                </p>
+              )}
             </div>
             <div className="space-y-3">
               <Label>Is this a Rush Order? <span className="text-primary">*</span></Label>
