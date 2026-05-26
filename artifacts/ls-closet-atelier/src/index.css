@@ -352,3 +352,8 @@
     inset: -1px;
   }
 }
+
+/* Form label color override for stone-background pages */
+.bg-stone-200 label {
+  color: #44403c;
+}
