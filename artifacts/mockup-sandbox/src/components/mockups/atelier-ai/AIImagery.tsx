@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowRight, Scissors, Sparkles, MoveRight } from "lucide-react";
+import { ArrowRight, MoveRight, Instagram, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function AIImagery() {
@@ -132,13 +132,19 @@ export function AIImagery() {
 
       {/* Footer */}
       <footer className="pt-24 pb-8 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto flex flex-col items-center">
-        <h2 className="text-2xl tracking-widest uppercase mb-12">L'S CLOSET ATELIER</h2>
+        <h2 className="text-2xl tracking-widest uppercase mb-6">Contact Us</h2>
+        <div className="flex items-center gap-6 mb-12">
+          <a href="https://instagram.com/lscloset.atelier" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-white transition-colors" aria-label="Instagram">
+            <Instagram className="w-5 h-5" />
+          </a>
+          <a href="mailto:lsclosetatelier@gmail.com" className="text-zinc-400 hover:text-white transition-colors" aria-label="Email">
+            <Mail className="w-5 h-5" />
+          </a>
+        </div>
         <div className="w-full h-px bg-white/10 mb-8"></div>
         <div className="w-full flex flex-col md:flex-row justify-between items-center gap-4 text-xs tracking-widest text-zinc-500 uppercase">
           <p>© {new Date().getFullYear()} L's Closet Atelier. All rights reserved.</p>
           <div className="flex items-center gap-6">
-            <a href="https://instagram.com/lscloset.atelier" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Instagram</a>
-            <a href="mailto:lsclosetatelier@gmail.com" className="hover:text-white transition-colors">Email</a>
             <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
           </div>
