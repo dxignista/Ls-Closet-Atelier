@@ -1,45 +1,63 @@
 import React from "react";
 import { Link } from "wouter";
-import { Instagram, Mail, Menu } from "lucide-react";
-import { Button } from "./ui/button";
+import { Instagram, Mail, Menu, X } from "lucide-react";
 
 export function Layout({ children }: { children: React.ReactNode }) {
   const [scrolled, setScrolled] = React.useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
 
   React.useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-    };
+    const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  React.useEffect(() => {
+    document.body.style.overflow = mobileMenuOpen ? "hidden" : "";
+    return () => { document.body.style.overflow = ""; };
+  }, [mobileMenuOpen]);
+
+  const close = () => setMobileMenuOpen(false);
+
   return (
     <div className="min-h-screen flex flex-col font-serif bg-background text-foreground selection:bg-[#4A2F3D] selection:text-white">
-      <header className={`fixed top-0 left-0 right-0 z-50 px-6 py-6 flex items-center justify-between transition-colors duration-300 ${scrolled ? 'bg-background/90 backdrop-blur-md border-b border-white/5' : 'mix-blend-difference text-white'}`}>
-        <Link href="/" className="text-xl tracking-widest font-medium z-50 relative">L'S CLOSET ATELIER</Link>
-        
+      <header className={`fixed top-0 left-0 right-0 z-50 px-6 py-6 flex items-center justify-between transition-colors duration-300 ${scrolled ? "bg-background/90 backdrop-blur-md border-b border-white/5" : "mix-blend-difference text-white"}`}>
+        <Link href="/" className="text-xl tracking-widest font-medium z-50 relative" onClick={close}>
+          L'S CLOSET ATELIER
+        </Link>
+
         <nav className="hidden md:flex items-center gap-8 text-sm tracking-widest uppercase relative z-50">
           <Link href="/alteration" className="hover:text-primary transition-colors duration-300">Alteration Requests</Link>
           <Link href="/costume" className="hover:text-primary transition-colors duration-300">Couture Costumes</Link>
         </nav>
 
-        <button 
-          className="md:hidden z-50 relative"
+        <button
+          className="md:hidden z-[60] relative p-1"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
         >
-          <Menu className="w-6 h-6" />
+          {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
-
-        {mobileMenuOpen && (
-          <div className="fixed inset-0 bg-background z-40 flex flex-col items-center justify-center gap-8 text-lg tracking-widest uppercase">
-            <Link href="/" onClick={() => setMobileMenuOpen(false)} className="hover:text-primary transition-colors">Home</Link>
-            <Link href="/alteration" onClick={() => setMobileMenuOpen(false)} className="hover:text-primary transition-colors">Alteration Requests</Link>
-            <Link href="/costume" onClick={() => setMobileMenuOpen(false)} className="hover:text-primary transition-colors">Couture Costumes</Link>
-          </div>
-        )}
       </header>
+
+      {/* Backdrop */}
+      <div
+        className={`fixed inset-0 z-[45] bg-black/60 backdrop-blur-sm transition-opacity duration-300 md:hidden ${mobileMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}
+        onClick={close}
+      />
+
+      {/* Slide-out panel */}
+      <div
+        className={`fixed top-0 right-0 h-full w-72 z-[50] bg-[#0A0608] border-l border-white/5 flex flex-col justify-center px-10 gap-10 transition-transform duration-300 ease-in-out md:hidden ${mobileMenuOpen ? "translate-x-0" : "translate-x-full"}`}
+      >
+        <Link href="/" onClick={close} className="text-sm tracking-widest uppercase hover:text-primary transition-colors duration-200">Home</Link>
+        <Link href="/alteration" onClick={close} className="text-sm tracking-widest uppercase hover:text-primary transition-colors duration-200">Alteration Requests</Link>
+        <Link href="/costume" onClick={close} className="text-sm tracking-widest uppercase hover:text-primary transition-colors duration-200">Couture Costumes</Link>
+        <div className="h-px w-8 bg-white/20" />
+        <Link href="/privacy" onClick={close} className="text-xs tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors duration-200">Privacy Policy</Link>
+        <Link href="/terms" onClick={close} className="text-xs tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors duration-200">Terms of Service</Link>
+        <a href="https://venmo.com/code?user_id=4605407506990469447&created=1779775604.002775&printed=1" target="_blank" rel="noopener noreferrer" className="text-xs tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors duration-200">Pay Invoice</a>
+      </div>
 
       <main className="flex-1 w-full">
         {children}
