@@ -78,18 +78,6 @@ export function AIImagery() {
         </div>
       </section>
 
-      {/* Philosophy Quote */}
-      <section className="py-24 px-6 md:px-12 lg:px-24">
-        <div className="max-w-3xl mx-auto text-center">
-          <div className="w-12 h-px bg-gold mx-auto mb-12 opacity-60"></div>
-          <blockquote className="text-xl md:text-2xl lg:text-3xl leading-relaxed italic text-zinc-200 font-light mb-8">
-            "True luxury is found in the absence of the unnecessary. It is the perfect seam, the flawless drape, the quiet confidence of a garment built entirely around you."
-          </blockquote>
-          <p className="text-xs tracking-widest uppercase text-gold">— The Atelier Philosophy</p>
-          <div className="w-12 h-px bg-gold mx-auto mt-12 opacity-60"></div>
-        </div>
-      </section>
-
       {/* Services Section */}
       <section id="services" className="py-24 bg-jewel border-y border-white/5">
         <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
@@ -134,6 +122,18 @@ export function AIImagery() {
               </div>
             </a>
           </div>
+        </div>
+      </section>
+
+      {/* Philosophy Quote */}
+      <section className="py-24 px-6 md:px-12 lg:px-24">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-xs tracking-widest uppercase text-gold mb-12">L's Closet Philosophy</h2>
+          <div className="w-12 h-px bg-gold mx-auto mb-12 opacity-60"></div>
+          <blockquote className="text-xl md:text-2xl lg:text-3xl leading-relaxed italic text-zinc-200 font-light">
+            "True luxury is found in the absence of the unnecessary. It is the perfect seam, the flawless drape, the quiet confidence of a garment built entirely around you."
+          </blockquote>
+          <div className="w-12 h-px bg-gold mx-auto mt-12 opacity-60"></div>
         </div>
       </section>
 
