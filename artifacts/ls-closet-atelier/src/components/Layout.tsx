@@ -1,10 +1,12 @@
 import React from "react";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 import { Instagram, Mail, Menu, X } from "lucide-react";
 
 export function Layout({ children }: { children: React.ReactNode }) {
   const [scrolled, setScrolled] = React.useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
+  const [location] = useLocation();
+  const isHome = location === "/";
 
   React.useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -21,7 +23,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
   return (
     <div className="min-h-screen flex flex-col font-serif bg-background text-foreground selection:bg-[#4A2F3D] selection:text-white">
-      <header className={`fixed top-0 left-0 right-0 z-50 px-6 py-6 flex items-center justify-between transition-colors duration-300 ${scrolled ? "bg-background/90 backdrop-blur-md border-b border-white/5" : "mix-blend-difference text-white"}`}>
+      <header className={`fixed top-0 left-0 right-0 z-50 px-6 py-6 flex items-center justify-between transition-colors duration-300 ${scrolled ? "bg-background/90 backdrop-blur-md border-b border-white/5" : isHome ? "mix-blend-difference text-white" : "bg-background/90 backdrop-blur-md border-b border-white/5"}`}>
         <Link href="/" className="text-xl tracking-widest font-medium z-50 relative" onClick={close}>
           L'S CLOSET ATELIER
         </Link>
