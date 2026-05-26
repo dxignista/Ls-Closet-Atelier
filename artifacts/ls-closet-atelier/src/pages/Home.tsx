@@ -33,7 +33,7 @@ export function Home() {
         
         <div className="relative z-10 text-center max-w-4xl px-4 mt-20">
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-medium tracking-tight mb-6 leading-[1.1] text-white">
-            Movement <br/> <span className="italic text-gold">Engineered.</span>
+            Movement <br/> <span className="italic text-gold">Designed.</span>
           </h1>
           <p className="text-lg md:text-xl text-zinc-300 max-w-xl mx-auto mb-10 font-light">
             Precision-cut couture and expert alterations for the competitive stage and beyond.
