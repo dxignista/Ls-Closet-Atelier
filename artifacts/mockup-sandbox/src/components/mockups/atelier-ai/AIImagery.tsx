@@ -47,7 +47,7 @@ export function AIImagery() {
             Movement <br/> <span className="italic text-gold">Engineered.</span>
           </h1>
           <p className="text-lg md:text-xl text-zinc-300 max-w-xl mx-auto mb-10 font-light">
-            Precision-cut couture and expert alterations for competitive dancers who demand flawless craft.
+            Precision-cut couture and expert alterations for the competitive stage — and every moment beyond it.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
             <a href="#services" className="group flex items-center gap-2 text-sm tracking-widest uppercase border-b border-gold pb-1 hover:text-gold transition-colors">
