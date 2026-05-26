@@ -333,7 +333,7 @@ export function CostumeForm() {
 
           <div className="space-y-2 max-w-xs">
             <Label>Investment</Label>
-            <Input {...register("investment")} disabled={noBudget} className="bg-white border-stone-300 text-stone-900 disabled:opacity-50" placeholder="$" />
+            <Input {...register("investment")} disabled={noBudget} className="bg-white border-stone-300 text-stone-900" placeholder="$" />
             <label className="flex items-center gap-2 cursor-pointer text-sm pt-1">
               <input type="checkbox" {...register("noBudget")} className="accent-primary" />
               <span className="text-stone-700">I don't have a budget</span>
