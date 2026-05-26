@@ -87,9 +87,6 @@ export function AIImagery() {
             {/* Alterations */}
             <a href="/alteration" className="group block group">
               <div className="h-[400px] bg-[#110A0D] border border-white/5 rounded-sm p-10 flex flex-col justify-between transition-colors hover:border-gold/50 relative overflow-hidden">
-                <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity group-hover:scale-110 duration-700">
-                  <Scissors className="w-32 h-32" />
-                </div>
                 <div>
                   <span className="text-gold tracking-widest text-xs uppercase mb-4 block">Refinement</span>
                   <h3 className="text-3xl mb-4">Alteration Requests</h3>
@@ -106,9 +103,6 @@ export function AIImagery() {
             {/* Couture */}
             <a href="/costume" className="group block">
               <div className="h-[400px] bg-[#110A0D] border border-white/5 rounded-sm p-10 flex flex-col justify-between transition-colors hover:border-gold/50 relative overflow-hidden">
-                <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity group-hover:scale-110 duration-700">
-                  <Sparkles className="w-32 h-32" />
-                </div>
                 <div>
                   <span className="text-gold tracking-widest text-xs uppercase mb-4 block">Creation</span>
                   <h3 className="text-3xl mb-4">Couture Costumes</h3>
