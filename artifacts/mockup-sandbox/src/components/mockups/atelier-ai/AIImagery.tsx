@@ -137,7 +137,7 @@ export function AIImagery() {
         <div className="w-full flex flex-col md:flex-row justify-between items-center gap-4 text-xs tracking-widest text-zinc-500 uppercase">
           <p>© {new Date().getFullYear()} L's Closet Atelier. All rights reserved.</p>
           <div className="flex items-center gap-6">
-            <a href="https://instagram.com/lsclosetatelier" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Instagram</a>
+            <a href="https://instagram.com/lscloset.atelier" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Instagram</a>
             <a href="mailto:lsclosetatelier@gmail.com" className="hover:text-white transition-colors">Email</a>
             <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
