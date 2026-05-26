@@ -18,7 +18,6 @@ export function CostumeForm() {
       baseStyle: "",
       coverageLevel: "",
       rhinestonePreference: "",
-      rushOrder: "No",
       noBudget: false
     }
   });
@@ -328,17 +327,6 @@ export function CostumeForm() {
                   <span>⚠</span> Rush order fees apply.
                 </p>
               )}
-            </div>
-            <div className="space-y-3">
-              <Label>Is this a Rush Order? <span className="text-primary">*</span></Label>
-              <div className="flex gap-6 mt-2">
-                {['Yes', 'No'].map(ans => (
-                  <label key={ans} className="flex items-center gap-2 cursor-pointer text-sm">
-                    <input type="radio" value={ans} {...register("rushOrder", { required: true })} className="accent-primary" />
-                    <span>{ans}</span>
-                  </label>
-                ))}
-              </div>
             </div>
           </div>
 
