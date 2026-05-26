@@ -169,7 +169,7 @@ export function CostumeForm() {
               </label>
             </div>
             {danceStyleOther && (
-              <Input {...register("danceStyleOtherText")} placeholder="Please specify" className="bg-input border-border mt-2" />
+              <Input {...register("danceStyleOtherText")} placeholder="Please specify" className="bg-white border-stone-300 text-stone-900 mt-2" />
             )}
           </div>
 
@@ -180,7 +180,7 @@ export function CostumeForm() {
 
           <div className="space-y-2">
             <Label>Describe the dance theme or emotional story <span className="text-primary">*</span></Label>
-            <Textarea {...register("danceTheme", { required: true })} rows={3} className="bg-input border-border resize-none" />
+            <Textarea {...register("danceTheme", { required: true })} rows={3} className="bg-white border-stone-300 text-stone-900 resize-none" />
           </div>
         </div>
 
@@ -213,12 +213,12 @@ export function CostumeForm() {
 
           <div className="space-y-2">
             <Label>Upload Inspiration Photos</Label>
-            <Input type="file" multiple accept="image/*" {...register("inspirationPhotos")} className="bg-input border-border file:text-primary file:bg-transparent file:border-0 cursor-pointer" />
+            <Input type="file" multiple accept="image/*" {...register("inspirationPhotos")} className="bg-white border-stone-300 text-stone-900 file:text-primary file:bg-transparent file:border-0 cursor-pointer" />
           </div>
 
           <div className="space-y-2">
             <Label>Must-have details or requests</Label>
-            <Textarea {...register("mustHaves")} rows={3} className="bg-input border-border resize-none" />
+            <Textarea {...register("mustHaves")} rows={3} className="bg-white border-stone-300 text-stone-900 resize-none" />
           </div>
         </div>
 
@@ -253,7 +253,7 @@ export function CostumeForm() {
               </label>
             </div>
             {designElementsOther && (
-              <Input {...register("designElementsOtherText")} placeholder="Please specify" className="bg-input border-border mt-2" />
+              <Input {...register("designElementsOtherText")} placeholder="Please specify" className="bg-white border-stone-300 text-stone-900 mt-2" />
             )}
           </div>
         </div>
@@ -333,7 +333,7 @@ export function CostumeForm() {
 
           <div className="space-y-2 max-w-xs">
             <Label>Investment</Label>
-            <Input {...register("investment")} disabled={noBudget} className="bg-input border-border disabled:opacity-50" placeholder="$" />
+            <Input {...register("investment")} disabled={noBudget} className="bg-white border-stone-300 text-stone-900 disabled:opacity-50" placeholder="$" />
             <label className="flex items-center gap-2 cursor-pointer text-sm pt-1">
               <input type="checkbox" {...register("noBudget")} className="accent-primary" />
               <span className="text-stone-700">I don't have a budget</span>
