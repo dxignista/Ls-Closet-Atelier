@@ -68,22 +68,22 @@ export function Home() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-24 bg-jewel border-y border-white/5">
+      <section id="services" className="py-24 bg-stone-200 border-y border-stone-300">
         <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
-          <h2 className="text-4xl text-center mb-20 italic tracking-wide text-foreground">Our Services</h2>
+          <h2 className="text-4xl text-center mb-20 italic tracking-wide text-stone-900">Our Services</h2>
           
           <div className="grid md:grid-cols-2 gap-12 lg:gap-24">
             {/* Alterations */}
             <Link href="/alteration" className="group block">
-              <div className="h-[400px] bg-[#110A0D] border border-white/5 rounded-sm p-10 flex flex-col justify-between transition-colors hover:border-gold/50 relative overflow-hidden">
+              <div className="h-[400px] bg-stone-50 border border-stone-300 rounded-sm p-10 flex flex-col justify-between transition-colors hover:border-[#D4AF37] relative overflow-hidden">
                 <div>
                   <span className="text-gold tracking-widest text-xs uppercase mb-4 block">Refinement</span>
-                  <h3 className="text-3xl mb-4 text-foreground">Alteration Requests</h3>
-                  <p className="text-zinc-400 font-light leading-relaxed max-w-sm">
+                  <h3 className="text-3xl mb-4 text-stone-900">Alteration Requests</h3>
+                  <p className="text-stone-600 font-light leading-relaxed max-w-sm">
                     Impeccable adjustments for fit, structure, and movement. Whether it is a slight hem or a complete bodice reconstruction.
                   </p>
                 </div>
-                <div className="flex items-center gap-3 text-sm tracking-widest uppercase group-hover:text-gold transition-colors text-foreground">
+                <div className="flex items-center gap-3 text-sm tracking-widest uppercase group-hover:text-gold transition-colors text-stone-800">
                   Request Service <ArrowRight className="w-4 h-4" />
                 </div>
               </div>
@@ -91,15 +91,15 @@ export function Home() {
 
             {/* Couture */}
             <Link href="/costume" className="group block">
-              <div className="h-[400px] bg-[#110A0D] border border-white/5 rounded-sm p-10 flex flex-col justify-between transition-colors hover:border-gold/50 relative overflow-hidden">
+              <div className="h-[400px] bg-stone-50 border border-stone-300 rounded-sm p-10 flex flex-col justify-between transition-colors hover:border-[#D4AF37] relative overflow-hidden">
                 <div>
                   <span className="text-gold tracking-widest text-xs uppercase mb-4 block">Creation</span>
-                  <h3 className="text-3xl mb-4 text-foreground">Couture Costumes</h3>
-                  <p className="text-zinc-400 font-light leading-relaxed max-w-sm">
+                  <h3 className="text-3xl mb-4 text-stone-900">Couture Costumes</h3>
+                  <p className="text-stone-600 font-light leading-relaxed max-w-sm">
                     Bespoke competitive wear designed exclusively for your choreography and body. From sketch to the final stone.
                   </p>
                 </div>
-                <div className="flex items-center gap-3 text-sm tracking-widest uppercase group-hover:text-gold transition-colors text-foreground">
+                <div className="flex items-center gap-3 text-sm tracking-widest uppercase group-hover:text-gold transition-colors text-stone-800">
                   Begin Commission <ArrowRight className="w-4 h-4" />
                 </div>
               </div>
