@@ -62,7 +62,7 @@ export function AlterationForm() {
         <p className="text-zinc-400 font-light">Please complete this form to request alterations.</p>
       </div>
 
-      <form onSubmit={handleSubmit(onSubmit)} className="space-y-10 bg-card p-8 md:p-12 border border-border rounded-sm">
+      <form onSubmit={handleSubmit(onSubmit)} className="space-y-10">
         
         {/* Personal Details */}
         <div className="space-y-6">

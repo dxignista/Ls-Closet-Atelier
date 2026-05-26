@@ -70,7 +70,7 @@ export function CostumeForm() {
         <p className="text-zinc-400 font-light">Please complete this form to begin the custom design process.</p>
       </div>
 
-      <form onSubmit={handleSubmit(onSubmit)} className="space-y-12 bg-card p-8 md:p-12 border border-border rounded-sm">
+      <form onSubmit={handleSubmit(onSubmit)} className="space-y-12">
         
         {/* Client Information */}
         <div className="space-y-6">
