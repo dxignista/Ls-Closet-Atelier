@@ -360,9 +360,9 @@
 
 /* Link colors on stone-background pages */
 .bg-stone-200 a {
-  color: #1c1917;
+  color: #CFA53A;
   transition: color 0.2s;
 }
 .bg-stone-200 a:hover {
-  color: #cfa53a;
+  color: #CFA53A;
 }
