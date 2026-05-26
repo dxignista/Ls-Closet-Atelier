@@ -81,7 +81,7 @@ export function AIImagery() {
       {/* Services Section */}
       <section id="services" className="py-24 bg-jewel border-y border-white/5">
         <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
-          <h2 className="text-4xl text-center mb-20 italic tracking-wide">Our Expertise</h2>
+          <h2 className="text-4xl text-center mb-20 italic tracking-wide">Our Services</h2>
           
           <div className="grid md:grid-cols-2 gap-12 lg:gap-24">
             {/* Alterations */}
@@ -122,8 +122,7 @@ export function AIImagery() {
       {/* Philosophy Quote */}
       <section className="py-24 px-6 md:px-12 lg:px-24">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-xs tracking-widest uppercase text-gold mb-12">L's Closet Philosophy</h2>
-          <div className="w-12 h-px bg-gold mx-auto mb-12 opacity-60"></div>
+          <h2 className="text-4xl text-center mb-20 italic tracking-wide">Our Philosophy</h2>
           <blockquote className="text-xl md:text-2xl lg:text-3xl leading-relaxed italic text-zinc-200 font-light">
             "True luxury is found in the absence of the unnecessary. It is the perfect seam, the flawless drape, the quiet confidence of a garment built entirely around you."
           </blockquote>
