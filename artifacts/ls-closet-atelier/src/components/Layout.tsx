@@ -18,7 +18,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="min-h-screen flex flex-col font-serif bg-background text-foreground selection:bg-[#4A2F3D] selection:text-white">
       <header className={`fixed top-0 left-0 right-0 z-50 px-6 py-6 flex items-center justify-between transition-colors duration-300 ${scrolled ? 'bg-background/90 backdrop-blur-md border-b border-white/5' : 'mix-blend-difference text-white'}`}>
-        <Link href="/" className="text-xl tracking-widest font-medium z-50 relative">L'S CLOSET ATELIER</Link>
+        <Link href="/" className="z-50 relative" style={{ fontFamily: "'Cinzel Decorative', serif", fontSize: '1rem', letterSpacing: '0.1em', fontWeight: 400 }}>L'S CLOSET ATELIER</Link>
         
         <nav className="hidden md:flex items-center gap-8 text-sm tracking-widest uppercase relative z-50">
           <Link href="/alteration" className="hover:text-primary transition-colors duration-300">Alteration Requests</Link>
