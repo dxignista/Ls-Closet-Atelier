@@ -27,8 +27,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
         </Link>
 
         <nav className="hidden md:flex items-center gap-8 text-sm tracking-widest uppercase relative z-50">
-          <Link href="/alteration" className="hover:text-primary transition-colors duration-300">Alteration Requests</Link>
-          <Link href="/costume" className="hover:text-primary transition-colors duration-300">Couture Costumes</Link>
+          <Link href="/alteration" className="text-primary">Alteration Requests</Link>
+          <Link href="/costume" className="text-primary">Couture Costumes</Link>
         </nav>
 
         <button
@@ -57,9 +57,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
         >
           <X className="w-5 h-5" />
         </button>
-        <Link href="/" onClick={close} className="text-sm tracking-widest uppercase hover:text-primary transition-colors duration-200">Home</Link>
-        <Link href="/alteration" onClick={close} className="text-sm tracking-widest uppercase hover:text-primary transition-colors duration-200">Alteration Requests</Link>
-        <Link href="/costume" onClick={close} className="text-sm tracking-widest uppercase hover:text-primary transition-colors duration-200">Couture Costumes</Link>
+        <Link href="/" onClick={close} className="text-sm tracking-widest uppercase text-primary">Home</Link>
+        <Link href="/alteration" onClick={close} className="text-sm tracking-widest uppercase text-primary">Alteration Requests</Link>
+        <Link href="/costume" onClick={close} className="text-sm tracking-widest uppercase text-primary">Couture Costumes</Link>
         <div className="h-px w-8 bg-white/20" />
         <Link href="/privacy" onClick={close} className="text-xs tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors duration-200">Privacy Policy</Link>
         <Link href="/terms" onClick={close} className="text-xs tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors duration-200">Terms of Service</Link>
