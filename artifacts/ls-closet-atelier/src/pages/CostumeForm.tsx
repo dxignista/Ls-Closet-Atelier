@@ -330,17 +330,13 @@ export function CostumeForm() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="space-y-2">
-              <Label>Investment</Label>
-              <Input {...register("investment")} disabled={noBudget} className="bg-input border-border disabled:opacity-50" placeholder="$" />
-            </div>
-            <div className="flex items-center pt-8">
-              <label className="flex items-center gap-2 cursor-pointer text-sm">
-                <input type="checkbox" {...register("noBudget")} className="accent-primary" />
-                <span className="text-zinc-300">I don't have a budget</span>
-              </label>
-            </div>
+          <div className="space-y-2 max-w-xs">
+            <Label>Investment</Label>
+            <Input {...register("investment")} disabled={noBudget} className="bg-input border-border disabled:opacity-50" placeholder="$" />
+            <label className="flex items-center gap-2 cursor-pointer text-sm pt-1">
+              <input type="checkbox" {...register("noBudget")} className="accent-primary" />
+              <span className="text-zinc-300">I don't have a budget</span>
+            </label>
           </div>
         </div>
 
