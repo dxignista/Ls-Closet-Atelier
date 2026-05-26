@@ -1,0 +1,14 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "JHcBxKAunECQAKmQMneAn"
+uri = "file://artifacts/mockup-sandbox/public/images/atelier-hero.png"
+type = "image"
+title = "Hero dance dress close-up"
+
+[[generated]]
+id = "S_XIRTKw8g5DY9avhKUp6"
+uri = "file://artifacts/mockup-sandbox/public/images/atelier-accent.png"
+type = "image"
+title = "Dancer silhouette mid-movement"
