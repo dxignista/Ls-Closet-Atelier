@@ -28,7 +28,7 @@ export function AlterationForm() {
   const onSubmit = async (data: any) => {
     setIsSubmitting(true);
     try {
-      const response = await fetch("https://formspree.io/f/ALTERATION_FORM_ID", {
+      const response = await fetch("https://formspree.io/f/mredoelo", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
