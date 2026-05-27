@@ -324,7 +324,7 @@ export function CostumeForm() {
               <Label>Date Costume Must Be Competition Ready <span className="text-primary">*</span></Label>
               <Input type="date" {...register("readyDate", { required: true })} className="bg-white border-stone-300 text-stone-900" />
               {isRushOrder && (
-                <p className="text-xs tracking-wide text-amber-400 flex items-center gap-1.5 mt-1">
+                <p className="text-xs tracking-wide text-red-600 flex items-center gap-1.5 mt-1">
                   <span>⚠</span> Rush order fees apply.
                 </p>
               )}
