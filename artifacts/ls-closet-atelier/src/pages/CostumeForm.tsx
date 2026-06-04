@@ -212,11 +212,6 @@ export function CostumeForm() {
           </div>
 
           <div className="space-y-2">
-            <Label>Upload Inspiration Photos</Label>
-            <Input type="file" multiple accept="image/*" {...register("inspirationPhotos")} className="bg-white border-stone-300 text-stone-900 file:text-primary file:bg-transparent file:border-0 cursor-pointer" />
-          </div>
-
-          <div className="space-y-2">
             <Label>Must-have details or requests</Label>
             <Textarea {...register("mustHaves")} rows={3} className="bg-white border-stone-300 text-stone-900 resize-none" />
           </div>
