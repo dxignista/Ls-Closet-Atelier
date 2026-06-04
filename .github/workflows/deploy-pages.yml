@@ -22,18 +22,22 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 18
+          cache: "pnpm"
 
-      - name: Install dependencies for frontend
-        working-directory: artifacts/ls-closet-atelier
-        run: npm install
+      - name: Install dependencies
+        run: pnpm install --no-frozen-lockfile
 
       - name: Build site
-        working-directory: artifacts/ls-closet-atelier
-        run: npm run build
+        run: pnpm -C artifacts/ls-closet-atelier run build:github
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
