@@ -150,10 +150,6 @@ export function AlterationForm() {
             <Textarea {...register("details", { required: true })} rows={4} className="bg-white border-stone-300 text-stone-900 focus-visible:ring-primary resize-none" placeholder="Please describe what needs to be done..." />
           </div>
 
-          <div className="space-y-2">
-            <Label>Upload Photo of Garment <span className="text-primary">*</span></Label>
-            <Input type="file" accept="image/*" {...register("photo", { required: true })} className="bg-white border-stone-300 text-stone-900 cursor-pointer file:text-primary file:bg-transparent file:border-0" />
-          </div>
         </div>
 
         {/* Other */}
